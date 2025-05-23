@@ -1,0 +1,269 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Centrado del contenido principal con márgenes */
+main {
+    margin: 20px auto;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+/* Encabezado */
+header {
+    background-color: #f4f4f9;
+    color: #333; 
+    padding: 20px 0;
+    position: relative;
+}
+
+/* Contenedor de logos */
+.logo-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    flex-grow: 1;
+    text-align: center;
+}
+
+header p {
+    margin: 5px 0 20px;
+    font-size: 1.2em;
+    font-style: italic;
+}
+
+/* Estilos para los logos */
+.logo {
+    width: 200px;
+    height: auto;
+}
+
+/* Menú de navegación centrado */
+nav {
+    background-color: #00303F;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color: #111;
+}
+
+/* Contenedor de botones */
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+button {
+    background-color: #00303F;
+    color: #fff;
+    font-size: 1em;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #00303F;
+}
+
+/* Contenido principal */
+.content {
+    margin: 20px auto;
+    max-width: 800px;
+    text-align: center;
+    font-size: 1em;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Contenedor de la tabla */
+.table-container {
+    max-height: 400px;
+    overflow-y: auto;
+    position: relative;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+/* Estilos para la tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Encabezado fijo y centrado */
+thead th {
+    position: sticky;
+    top: 0;
+    background-color: #00303F;
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+    z-index: 10;
+}
+
+/* Estilos de alineación de las celdas de datos */
+table th, table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    font-size: 1em;
+}
+
+/* Alineación específica para columnas */
+table td:nth-child(1), /* Columna Autor */
+table td:nth-child(2) { /* Columna Título */
+    text-align: left;
+}
+
+table td:nth-child(3), /* Columna Fecha */
+table td:nth-child(4), /* Columna Número */
+table td:nth-child(5), /* Columna Año */
+table td:nth-child(6) { /* Columna Categoría */
+    text-align: center;
+}
+
+/* Alternancia de colores en filas */
+table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+table tbody tr:nth-child(odd) {
+    background-color: #fff;
+}
+
+table tbody tr:hover {
+    background-color: #ffe6cc;
+}
+
+/* Estilo del formulario de filtros */
+form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+input, select, button {
+    padding: 8px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Alinea el contador total */
+p {
+    text-align: center;
+    font-size: 1.1em;
+    color: #333;
+    margin: 10px 0;
+}
+
+footer {
+    background-color: #00303F;
+    color: white;
+    padding: 60px 20px;
+    text-align: left;
+    position: relative; /* Asegura que el contenido se mantenga en orden */
+}
+
+.footer-content p {
+    margin: 10px 0;
+    color: white;
+}
+
+.map-container {
+    position: absolute; /* Permite que el mapa flote a la derecha */
+    right: 20px; /* Ajusta el espacio desde el lado derecho */
+    bottom: 20px; /* Ajusta el espacio desde el fondo */
+}
+
+/* Estilos para el contenedor de introducción */
+.intro-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: justify;
+    line-height: 1.8;
+    font-family: 'Georgia', serif;
+    color: #333;
+}
+
+.intro-container h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+.intro-text {
+    margin-bottom: 20px;
+    font-size: 1.1em;
+}
+
+.intro-text strong {
+    color: #2c3e50;
+    font-weight: bold;
+}
+
+.intro-text em {
+    font-style: italic;
+    color: #555;
+}
+
+/* Estilos para el botón */
+.button-container {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.button-container button {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    background-color: #2c3e50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button-container button:hover {
+    background-color: #34495e;
+}
+
