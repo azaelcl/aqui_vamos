@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block title %}Base de Datos - Aquí Vamos{% endblock %}
+
+{% block content %}
+<section>
+    <h2>Filtros de Búsqueda</h2>
+    <form method="GET" action="{{ url_for('database') }}">
+        <input type="text" name="author" placeholder="Filtrar por Autor" value="{{ request.args.get('author', '') }}">
+        <input type="text" name="title" placeholder="Filtrar por Título" value="{{ request.args.get('title', '') }}">
+        <input type="text" name="date" placeholder="Filtrar por Fecha (dd/mm/yyyy)" value="{{ request.args.get('date', '') }}">
+        <input type="number" name="number" placeholder="Filtrar por Número" value="{{ request.args.get('number', '') }}">
+        <input type="number" name="year" placeholder="Filtrar por Año" value="{{ request.args.get('year', '') }}">
+        
+        <!-- Menú desplegable para Categoría -->
+        <select name="category">
+            <option value="">Seleccionar Categoría</option>
+            {% for category in categories %}
+            <option value="{{ category }}" {% if request.args.get('category') == category %}selected{% endif %}>{{ category }}</option>
+            {% endfor %}
+        </select>
+        
+        <button type="submit">Aplicar Filtros</button>
+    </form>
+    <p>Total de filas seleccionadas: {{ total_rows }}</p>  <!-- Muestra el total aquí -->
+</section>
+
+<section>
+    <h2>Resultados de la Base de Datos</h2>
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Autor</th>
+                    <th>Título</th>
+                    <th>Fecha</th>
+                    <th>Número</th>
+                    <th>Año</th>
+                    <th>Categoría</th> <!-- Nueva columna para la categoría -->
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in data %}
+                <tr>
+                    <td>{{ item['Autor'] }}</td>
+                    <td>{{ item['Título'] }}</td>
+                    <td>{{ item['Fecha'] }}</td>
+                    <td>{{ item['Número'] }}</td>
+                    <td>{{ item['Año'] }}</td>
+                    <td>{{ item['Categoría'] }}</td> <!-- Mostrar la categoría -->
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</section>
+{% endblock %}

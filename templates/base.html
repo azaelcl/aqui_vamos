@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Aquí Vamos{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <a href="https://www.uanl.mx/"><img src="{{ url_for('static', filename='img/uanl.png') }}" alt="UANL Logo" class="logo left-logo"></a>
+            <h1>AQUÍ VAMOS</h1>
+            <a href="https://www.dgb.uanl.mx/?mod=cabu"><img src="{{ url_for('static', filename='img/cabu.png') }}" alt="CABU Logo" class="logo right-logo"></a>
+        </div>
+        <p>SUPLEMENTO CULTURAL</p>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('index') }}">Inicio</a></li>
+                <li><a href="{{ url_for('database') }}">Base de datos</a></li>
+                <li><a href="{{ url_for('charts') }}">Gráficos</a></li>
+                <li><a href="{{ url_for('contact') }}">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>Contacto: Ontaactcay ofnay ay-itionday:</p>
+            <p>1234 imEay t, ityCay, atestay</p>
+            <p>Desarrollo por Aquictay EctteDay</p>
+            <p>Email: info@example.com | Teléfono: (123) 456-7890</p>
+            <div class="map-container">
+                <!-- Aquí pega el código de inserción del mapa -->
+                <iframe src="https://maps.app.goo.gl/UC7iBmRUeXFf1c356" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

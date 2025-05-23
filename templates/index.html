@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %}Inicio{% endblock %}
+
+{% block content %}
+
+<div class="button-container">
+    <button onclick="window.location.href='/database';">Consultar la base de datos del Aquí Vamos</button>
+</div>
+
+<div class="intro-container">
+    <p class="intro-text">
+        <strong>Aquí vamos.</strong> Suplemento cultural del diario <em>El Porvenir</em>. Publicación semanal. Monterrey, N.L., 1982-1992.
+    </p>
+    <p class="intro-text">
+        Los escritores <strong>Jorge Cantú de la Garza</strong> —su fundador—, <strong>Rosaura Barahona</strong> y <strong>José Jaime Ruiz</strong> figuran entre quienes dirigieron el suplemento. También contribuyeron en su elaboración periodistas y escritores como <strong>Alfonso Reyes Martínez</strong>, <strong>Horacio Salazar Herrera</strong>, <strong>José Ángel Rendón</strong>, <strong>Sergio Cárdenas Heiras</strong>, <strong>Héctor Alvarado</strong> y <strong>Gabriel Contreras</strong>.
+    </p>
+    <p class="intro-text">
+        Prueba del poder de convocatoria del semanario fue la variedad de sus colaboradores, periodistas, escritores y académicos: <strong>Sergio Cordero</strong>, <strong>José Francisco Villarreal</strong>, <strong>Joaquín Hurtado</strong>, <strong>Mario Anteo</strong>, <strong>Manuel Pérez Ramos</strong>, <strong>Alfredo Gracia Vicente</strong>, <strong>Hernán Solís Garza</strong>, <strong>Gerardo Mejía</strong>, <strong>José Roberto Mendirichaga</strong>, <strong>Juan Alberto Mancilla</strong>, <strong>Dulce María González</strong>, <strong>Diego de Jesús</strong>, <strong>Arnulfo Vigil</strong>, <strong>José Javier Villarreal</strong>, <strong>Francisco Veloquio</strong>, <strong>Patricia Laurent</strong>, <strong>Hugo Valdés</strong>, <strong>Guillermo Meléndez</strong>, <strong>Ricardo Elizondo Elizondo</strong>, <strong>Arturo Garza Villarreal</strong>, <strong>Margarito Cuéllar</strong>, <strong>Cris Villarreal Navarro</strong>, <strong>Nazario Sepúlveda</strong>, <strong>Humberto Salazar Herrera</strong>, <strong>Miguel Covarrubias</strong>, entre muchos otros.
+    </p>
+    <p class="intro-text">
+        <em>Aquí vamos</em> contenía artículos, crónicas, reseñas y textos literarios.
+    </p>
+</div>
+
+
+
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+{% endblock %}

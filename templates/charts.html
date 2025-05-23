@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %}Gráficos{% endblock %}
+
+{% block content %}
+    <h2>Gráficos</h2>
+    <p>Aquí van los gráficos.</p>
+    <div id="chart1" style="width:80%; max-width:800px; height:400px; margin:20px auto;"></div>
+    <div id="chart2" style="width:80%; max-width:800px; height:400px; margin:20px auto;"></div>
+    <div id="chart3" style="width:80%; max-width:800px; height:400px; margin:20px auto;"></div>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+{% endblock %}
