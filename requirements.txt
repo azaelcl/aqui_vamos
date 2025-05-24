@@ -2,8 +2,5 @@ flask
 gunicorn
 pandas
 matplotlib
-os
 plotly
 networkx
-json
-plotly.graph_objs
